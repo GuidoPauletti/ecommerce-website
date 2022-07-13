@@ -7,6 +7,7 @@ import { Home } from "./Components/Pages/Home";
 import { About } from "./Components/Pages/About";
 import { Products } from "./Components/Pages/Products";
 import { Store } from "./Components/Pages/Store";
+import {Cart} from "./Components/Pages/Cart";
 
 export const App = () => (
   <BrowserRouter>
@@ -30,6 +31,11 @@ export const App = () => (
     <Route
         path="/store"
         element={PageWrapper(Store)}
+    />
+
+    <Route
+      path="/cart"
+      element={PageWrapper(Cart)}
     />
     </Routes>
   </BrowserRouter>
