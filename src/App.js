@@ -6,8 +6,9 @@ import { PageWrapper } from "./Components/PageWrapper";
 import { Home } from "./Components/Pages/Home";
 import { About } from "./Components/Pages/About";
 import { Products } from "./Components/Pages/Products";
+import { Cart } from "./Components/Pages/Cart";
 import { Store } from "./Components/Pages/Store";
-import {Cart} from "./Components/Pages/Cart";
+
 
 export const App = () => (
   <BrowserRouter>
