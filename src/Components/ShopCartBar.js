@@ -11,7 +11,7 @@ export default function ShopCartBar() {
   
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static" sx={{ backgroundColor:"transparent", color:"black"}}>
+      <AppBar position="static" sx={{ backgroundColor:"transparent", color:"black", boxShadow:'none'}}>
         <Toolbar sx={{justifyContent:"right"}}>
           <Badge badgeContent={2} color="secondary" overlap="circular">
             <IconButton color="inherit"><LocalGroceryStoreIcon fontSize="large"/></IconButton>
