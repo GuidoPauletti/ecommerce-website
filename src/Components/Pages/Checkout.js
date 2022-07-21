@@ -4,16 +4,16 @@ import {CheckoutCard} from '../Common/CheckoutCard';
 import { styled } from '@mui/material/styles';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
+import { Total } from '../Total';
 
-const useStyles = styled((theme) => ({
-    root: {
-        flexGrow:  1,
-        padding: "2rem",
-    },
-}));
+const Container = styled('div')({
+    
+    flexGrow:  1,
+    padding: "2rem",
+    
+});
 
 export const Checkout = () => {
-    const classes = useStyles();
 
     function FormRow() {
         return (
@@ -28,7 +28,7 @@ export const Checkout = () => {
     }
 
     return (
-        <div className={classes.root}>
+        <Container>
             <Grid container spacing={3}>
                 <Grid item xs={12}>
                     <Typography align='center' gutterBottom variant='h4'>
@@ -40,10 +40,10 @@ export const Checkout = () => {
                 </Grid>
                 <Grid item xs={12} sm={4} md={3}>
                     <Typography align='center' gutterBottom variant='h4'>
-                        Total:
+                        <Total/>
                     </Typography>
                 </Grid>
             </Grid>
-        </div>
+        </Container>
     )
 }
