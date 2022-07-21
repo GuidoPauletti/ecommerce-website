@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { Link } from 'react-router-dom';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
@@ -14,7 +15,9 @@ export default function ShopCartBar() {
       <AppBar position="static" sx={{ backgroundColor:"transparent", color:"black", boxShadow:'none'}}>
         <Toolbar sx={{justifyContent:"right"}}>
           <Badge badgeContent={2} color="secondary" overlap="circular">
-            <IconButton color="inherit"><LocalGroceryStoreIcon fontSize="large"/></IconButton>
+            <IconButton color="inherit">
+              <Link to="/checkout"><LocalGroceryStoreIcon fontSize="large"/></Link>
+            </IconButton>
           </Badge>
         </Toolbar>
       </AppBar>
