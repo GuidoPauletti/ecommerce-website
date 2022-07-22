@@ -7,10 +7,19 @@ import IconButton from '@mui/material/IconButton';
 import DeleteIcon from '@mui/icons-material/Delete';
 import Typography from '@mui/material/Typography';
 import accounting from 'accounting';
+import { useStateValue } from '../../StateProvider';
+import { actionTypes } from '../../reducer';
 
 
 
 export function CheckoutCard(props) {
+
+  const [{basket}, dispatch] = useStateValue();
+
+  const removeItem = () => dispatch({
+    type: actionTypes.REMOVE_ITEM,
+    id: props.id
+  })
 
   return (
     <div>   
@@ -34,7 +43,7 @@ export function CheckoutCard(props) {
           alt="Aritos"
         />
         <CardActions disableSpacing>
-          <IconButton>
+          <IconButton onClick={removeItem}>
             <DeleteIcon/>
           </IconButton>
         </CardActions>
