@@ -14,7 +14,7 @@ const reducer = (state, action) => {
                 ...state,
                 basket: [...state.basket, action.item]
             }
-            default: return state;
+        default: return state;
     }
 }
 
