@@ -1,10 +1,10 @@
 import React from 'react';
-import {StoreProductInfo} from '../Assets/StoreProductInfo';
 import {CheckoutCard} from '../Common/CheckoutCard';
 import { styled } from '@mui/material/styles';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import { Total } from '../Total';
+import { useStateValue } from '../../StateProvider';
 
 const Container = styled('div')({
     
@@ -15,10 +15,12 @@ const Container = styled('div')({
 
 export const Checkout = () => {
 
+    const [{basket}, dispatch] = useStateValue();
+
     function FormRow() {
         return (
             <React.Fragment>
-                {StoreProductInfo.map((item) => (
+                {basket?.map((item) => (
                     <Grid item xs={12} sm={8} md={6} lg={4}>
                         <CheckoutCard key={item.id} {...item}/>
                     </Grid>

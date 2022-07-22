@@ -11,6 +11,8 @@ import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { AddShoppingCart } from '@mui/icons-material';
 import accounting from 'accounting';
+import { actionTypes } from '../../reducer';
+import { useStateValue } from '../../StateProvider';
 
 
 const ExpandMore = styled((props) => {
@@ -30,6 +32,22 @@ export function StoreProduct(props) {
   const handleExpandClick = () => {
     setExpanded(!expanded);
   };
+
+  const [{basket}, dispatch] = useStateValue();
+
+  const addToBasket = () => {
+    dispatch({
+      type: actionTypes.ADD_TO_BASKET,
+      item: {
+        id: props.id,
+        name: props.name,
+        type: props.type,
+        price: props.price,
+        image: props.image,
+        description: props.description
+      }
+    })
+  }
 
   return (
     <div>   
@@ -53,7 +71,7 @@ export function StoreProduct(props) {
           alt="Aritos"
         />
         <CardActions disableSpacing>
-          <IconButton aria-label="Agregar a Carrito">
+          <IconButton aria-label="Agregar a Carrito" onClick={addToBasket}>
             <AddShoppingCart fontSize='large' />
           </IconButton>
           <ExpandMore
