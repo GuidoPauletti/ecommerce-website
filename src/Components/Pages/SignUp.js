@@ -44,7 +44,7 @@ export default function SignUp() {
     event.preventDefault();
     createUserWithEmailAndPassword(auth, email, password).then(
       (auth) => {
-        <Navigate to={"/"} replace={true}/>
+        <Navigate to={"/"}/>
         console.log(auth);
       }
     ).catch((err) => {alert(err)})
