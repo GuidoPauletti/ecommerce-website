@@ -12,7 +12,7 @@ import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import { Link as RoutLink, Navigate } from 'react-router-dom';
+import { Link as RoutLink } from 'react-router-dom';
 import { auth } from '../firebase';
 import { createUserWithEmailAndPassword } from "firebase/auth";
 
@@ -44,8 +44,7 @@ export default function SignUp() {
     event.preventDefault();
     createUserWithEmailAndPassword(auth, email, password).then(
       (auth) => {
-        <Navigate to={"/"}/>
-        console.log(auth);
+        alert('Se ha creado tu usuario, ya puedes iniciar sesión.')
       }
     ).catch((err) => {alert(err)})
   };

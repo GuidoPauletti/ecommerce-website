@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, { useState } from 'react';
 import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import CssBaseline from '@mui/material/CssBaseline';
@@ -13,6 +13,9 @@ import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { Link as RoutLink } from 'react-router-dom';
+import { auth } from '../firebase';
+import { signInWithEmailAndPassword } from 'firebase/auth';
+
 
 function Copyright(props) {
   return (
@@ -30,13 +33,15 @@ function Copyright(props) {
 const theme = createTheme();
 
 export default function SignIn() {
+
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+
   const handleSubmit = (event) => {
     event.preventDefault();
-    const data = new FormData(event.currentTarget);
-    console.log({
-      email: data.get('email'),
-      password: data.get('password'),
-    });
+    signInWithEmailAndPassword(auth, email, password).then(
+      alert('Has iniciado sesión exitosamente')
+    ).catch(err => (alert(err)))
   };
 
   return (
@@ -57,8 +62,10 @@ export default function SignIn() {
           <Typography component="h1" variant="h5">
             Sign in
           </Typography>
-          <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1 }}>
+          <Box component="form" noValidate sx={{ mt: 1 }}>
             <TextField
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
               margin="normal"
               required
               fullWidth
@@ -69,6 +76,8 @@ export default function SignIn() {
               autoFocus
             />
             <TextField
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
               margin="normal"
               required
               fullWidth
@@ -83,6 +92,7 @@ export default function SignIn() {
               label="Remember me"
             />
             <Button
+              onClick={handleSubmit}
               type="submit"
               fullWidth
               variant="contained"
