@@ -4,6 +4,7 @@ import { Button } from '@mui/material';
 import { styled } from '@mui/material/styles';
 import { useStateValue } from '../StateProvider';
 import { getBasketTotal } from '../reducer';
+import { Link } from 'react-router-dom';
 
 const Container = styled('div')({
     justifyContent: 'center',
@@ -26,7 +27,9 @@ export const Total = () => {
     <Container>
         <h5>Cantidad de productos: {basket?.length}</h5>
         <h5>{accounting.formatMoney(getBasketTotal(basket), 'AR$')}</h5>
-        <CheckoutButton>Confirmar</CheckoutButton>
+        <Link to='/checkout'>
+          <CheckoutButton>Confirmar</CheckoutButton>
+        </Link>
     </Container> 
   )  
 }

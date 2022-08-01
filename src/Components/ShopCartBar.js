@@ -19,7 +19,7 @@ export default function ShopCartBar() {
         <Toolbar sx={{justifyContent:"right"}}>
           <Badge badgeContent={basket.length} color="secondary" overlap="circular">
             <IconButton color="inherit">
-              <Link to="/checkout"><LocalGroceryStoreIcon fontSize="large"/></Link>
+              <Link to="/shoppingcart"><LocalGroceryStoreIcon fontSize="large"/></Link>
             </IconButton>
           </Badge>
         </Toolbar>

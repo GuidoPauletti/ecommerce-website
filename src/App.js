@@ -7,13 +7,14 @@ import { About } from "./Components/Pages/About";
 import { Products } from "./Components/Pages/Products";
 import { Cart } from "./Components/Pages/Cart";
 import { Store } from "./Components/Pages/Store";
-import { Checkout } from "./Components/Pages/Checkout";
+import { ShoopingCart } from "./Components/Pages/ShoopingCart";
 import SignIn from "./Components/Pages/SignIn";
 import SignUp from "./Components/Pages/SignUp";
 import { useStateValue } from "./StateProvider";
 import { onAuthStateChanged } from "firebase/auth";
 import { auth } from "./Components/firebase";
 import { actionTypes } from "./reducer";
+import Checkout from "./Components/Checkout/Checkout";
 
 
 
@@ -58,8 +59,8 @@ export const App = () => {
     />
 
     <Route
-        path="/checkout"
-        element={PageWrapper(Checkout)}
+        path="/shoppingcart"
+        element={PageWrapper(ShoopingCart)}
     />
 
     <Route
@@ -70,6 +71,11 @@ export const App = () => {
     <Route
       path="/signup"
       element={PageWrapper(SignUp)}
+    />
+
+    <Route
+      path="/checkout"
+      element={PageWrapper(Checkout)}
     />
   </Routes>
   

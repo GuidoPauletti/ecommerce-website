@@ -13,7 +13,7 @@ const Container = styled('div')({
     
 });
 
-export const Checkout = () => {
+export const ShoopingCart = () => {
 
     const [{basket}, dispatch] = useStateValue();
 
