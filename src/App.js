@@ -1,5 +1,5 @@
-import React from "react";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import React, { useEffect } from "react";
+import { Route, Routes, useNavigate } from "react-router-dom";
 import { PageWrapper } from "./Components/PageWrapper";
 
 // Pages
@@ -10,17 +10,37 @@ import { Store } from "./Components/Pages/Store";
 import { Checkout } from "./Components/Pages/Checkout";
 import SignIn from "./Components/Pages/SignIn";
 import SignUp from "./Components/Pages/SignUp";
+import { useStateValue } from "./StateProvider";
+import { onAuthStateChanged } from "firebase/auth";
+import { auth } from "./Components/firebase";
+import { actionTypes } from "./reducer";
 
 
 
-export const App = () => (
-  <BrowserRouter>
-    <Routes>
-      <Route
-        exact={true}
-        path="/"
-        element={PageWrapper(About)}
-      />
+export const App = () => {
+
+  const navigate = useNavigate();
+
+  const [{user}, dispatch] = useStateValue();
+  useEffect(() => {
+    onAuthStateChanged(auth, (authUser) => {
+      if (authUser) {
+        dispatch({
+          type: actionTypes.SET_USER,
+          user: authUser,
+        });
+      };
+      navigate('/');
+    })
+  }, []);
+
+  return (
+  <Routes>
+    <Route
+      exact={true}
+      path="/"
+      element={PageWrapper(About)}
+    />
 
     <Route
         path="/signin"
@@ -47,10 +67,10 @@ export const App = () => (
       element={PageWrapper(Cart)}
     />
 
-<Route
+    <Route
       path="/signup"
       element={PageWrapper(SignUp)}
     />
-    </Routes>
-  </BrowserRouter>
-)
+  </Routes>
+  
+)}

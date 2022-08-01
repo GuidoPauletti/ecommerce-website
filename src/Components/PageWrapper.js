@@ -1,8 +1,30 @@
+import { signOut } from "firebase/auth";
 import React from "react";
 import { Link } from "react-router-dom";
+import { useStateValue } from "../StateProvider";
 import { Footer } from "./Common/Footer";
+import { auth } from "./firebase";
+import { actionTypes } from "../reducer";
 
-export const PageWrapper = (props) => (
+export const PageWrapper = (props) => {
+
+    const [{user}, dispatch] = useStateValue();
+
+    const handleAuth = () => {
+        if (user) {
+            signOut(auth);
+            dispatch({
+                type: actionTypes.EMPTY_BASKET,
+                basket: []
+            });
+            dispatch({
+                type: actionTypes.SET_USER,
+                user: null,
+              });
+        }
+    }
+
+    return (
     <div>
         <header>
             <h1 className="site-heading text-center text-faded d-none d-lg-block">
@@ -20,7 +42,7 @@ export const PageWrapper = (props) => (
                         <li className="nav-item px-lg-4"><Link className="nav-link text-uppercase" to="/">Sobre nosotros</Link></li>   
                         <li className="nav-item px-lg-4"><Link className="nav-link text-uppercase" to="/products">Productos</Link></li>
                         <li className="nav-item px-lg-4"><Link className="nav-link text-uppercase" to="/store">Tienda</Link></li>
-                        <li className="nav-item px-lg-4"><Link className="nav-link text-uppercase" to="/signin">Inicia sesión</Link></li>
+                        <li className="nav-item px-lg-4"><Link className="nav-link text-uppercase" to="/signin" onClick={handleAuth}>{user ? 'Cerrar sesión' : 'Inicia sesión'}</Link></li>
                     </ul>
                 </div>
             </div>
@@ -28,4 +50,4 @@ export const PageWrapper = (props) => (
         {props()}
         <Footer/>
     </div>
-)
+)};

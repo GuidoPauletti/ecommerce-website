@@ -3,11 +3,14 @@ import ReactDOM from 'react-dom';
 import { App } from './App';
 import { StateProvider } from './StateProvider';
 import reducer, { initialState } from './reducer';
+import { BrowserRouter } from 'react-router-dom';
 
 ReactDOM.render(
   <React.StrictMode>
     <StateProvider initialState={initialState} reducer={reducer}>
-      <App />
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>      
     </StateProvider>
   </React.StrictMode>,
   document.getElementById('root')
