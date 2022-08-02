@@ -42,7 +42,7 @@ export const PageWrapper = (props) => {
                         <li className="nav-item px-lg-4"><Link className="nav-link text-uppercase" to="/">Sobre nosotros</Link></li>   
                         <li className="nav-item px-lg-4"><Link className="nav-link text-uppercase" to="/products">Productos</Link></li>
                         <li className="nav-item px-lg-4"><Link className="nav-link text-uppercase" to="/store">Tienda</Link></li>
-                        <li className="nav-item px-lg-4"><Link className="nav-link text-uppercase" to="/signin" onClick={handleAuth}>{user ? 'Cerrar sesión' : 'Inicia sesión'}</Link></li>
+                        <li className="nav-item px-lg-4"><Link className="nav-link text-uppercase" to="/signin" onClick={handleAuth}>{user ? 'Cerrar sesión' : 'Iniciar sesión'}</Link></li>
                     </ul>
                 </div>
             </div>

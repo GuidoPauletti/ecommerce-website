@@ -25,7 +25,7 @@ function Copyright(props) {
     <Typography variant="body2" color="text.secondary" align="center" {...props}>
       {'Copyright © '}
       <Link color="inherit" href="https://mui.com/">
-        Your Website
+        Andrea Preisz
       </Link>{' '}
       {new Date().getFullYear()}
       {'.'}
@@ -65,7 +65,7 @@ export default function SignUp() {
             <LockOutlinedIcon />
           </Avatar>
           <Typography component="h1" variant="h5">
-            Sign up
+            Crear cuenta
           </Typography>
           <Box component="form" sx={{ mt: 3 }}>
             <Grid container spacing={2}>
@@ -76,7 +76,7 @@ export default function SignUp() {
                   required
                   fullWidth
                   id="firstName"
-                  label="First Name"
+                  label="Nombre"
                   autoFocus
                 />
               </Grid>
@@ -85,7 +85,7 @@ export default function SignUp() {
                   required
                   fullWidth
                   id="lastName"
-                  label="Last Name"
+                  label="Apellido"
                   name="lastName"
                   autoComplete="family-name"
                 />
@@ -97,7 +97,7 @@ export default function SignUp() {
                   required
                   fullWidth
                   id="email"
-                  label="Email Address"
+                  label="Dirección de email"
                   name="email"
                   autoComplete="email"
                 />
@@ -109,7 +109,7 @@ export default function SignUp() {
                   required
                   fullWidth
                   name="password"
-                  label="Password"
+                  label="Contraseña"
                   type="password"
                   id="password"
                   autoComplete="new-password"
@@ -118,7 +118,7 @@ export default function SignUp() {
               <Grid item xs={12}>
                 <FormControlLabel
                   control={<Checkbox value="allowExtraEmails" color="primary" />}
-                  label="I want to receive inspiration, marketing promotions and updates via email."
+                  label="Quiero recibir inspiración, publicidad y noticias de nuevos productos."
                 />
               </Grid>
             </Grid>
@@ -128,12 +128,12 @@ export default function SignUp() {
               variant="contained"
               sx={{ mt: 3, mb: 2 }}
             >
-              Sign Up
+              Crear cuenta
             </Button>
             <Grid container justifyContent="flex-end">
               <Grid item>
                 <RoutLink to="/signin">
-                  Already have an account? Sign in
+                  ¿Ya tienes una cuenta? Iniciar sesión
                 </RoutLink>
               </Grid>
             </Grid>

@@ -31,17 +31,17 @@ const products = [
 
 const addresses = ['1 MUI Drive', 'Reactville', 'Anytown', '99999', 'USA'];
 const payments = [
-  { name: 'Card type', detail: 'Visa' },
-  { name: 'Card holder', detail: 'Mr John Smith' },
-  { name: 'Card number', detail: 'xxxx-xxxx-xxxx-1234' },
-  { name: 'Expiry date', detail: '04/2024' },
+  { name: 'Tipo de tarjeta', detail: 'Visa' },
+  { name: 'Dueño de la tarjeta', detail: 'Mr John Smith' },
+  { name: 'Numero de tarjeta', detail: 'xxxx-xxxx-xxxx-1234' },
+  { name: 'Fecha de vencimiento', detail: '04/2024' },
 ];
 
 export default function Review() {
   return (
     <React.Fragment>
       <Typography variant="h6" gutterBottom>
-        Order summary
+        Resumen de tu orden
       </Typography>
       <List disablePadding>
         {products.map((product) => (
@@ -61,14 +61,14 @@ export default function Review() {
       <Grid container spacing={2}>
         <Grid item xs={12} sm={6}>
           <Typography variant="h6" gutterBottom sx={{ mt: 2 }}>
-            Shipping
+            Envio
           </Typography>
           <Typography gutterBottom>John Smith</Typography>
           <Typography gutterBottom>{addresses.join(', ')}</Typography>
         </Grid>
         <Grid item container direction="column" xs={12} sm={6}>
           <Typography variant="h6" gutterBottom sx={{ mt: 2 }}>
-            Payment details
+            Detalles de pago
           </Typography>
           <Grid container>
             {payments.map((payment) => (

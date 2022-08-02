@@ -22,7 +22,7 @@ function Copyright(props) {
     <Typography variant="body2" color="text.secondary" align="center" {...props}>
       {'Copyright © '}
       <Link color="inherit" href="https://mui.com/">
-        Your Website
+        Andrea Preisz
       </Link>{' '}
       {new Date().getFullYear()}
       {'.'}
@@ -60,7 +60,7 @@ export default function SignIn() {
             <LockOutlinedIcon />
           </Avatar>
           <Typography component="h1" variant="h5">
-            Sign in
+            Iniciar sesión
           </Typography>
           <Box component="form" noValidate sx={{ mt: 1 }}>
             <TextField
@@ -70,7 +70,7 @@ export default function SignIn() {
               required
               fullWidth
               id="email"
-              label="Email Address"
+              label="Dirección email"
               name="email"
               autoComplete="email"
               autoFocus
@@ -82,14 +82,14 @@ export default function SignIn() {
               required
               fullWidth
               name="password"
-              label="Password"
+              label="Contraseña"
               type="password"
               id="password"
               autoComplete="current-password"
             />
             <FormControlLabel
               control={<Checkbox value="remember" color="primary" />}
-              label="Remember me"
+              label="Recordar"
             />
             <Button
               onClick={handleSubmit}
@@ -98,17 +98,17 @@ export default function SignIn() {
               variant="contained"
               sx={{ mt: 3, mb: 2 }}
             >
-              Sign In
+              Iniciar sesión
             </Button>
             <Grid container>
               <Grid item xs>
                 <Link href="#" variant="body2">
-                  Forgot password?
+                  ¿Olvidaste tu contraseña?
                 </Link>
               </Grid>
               <Grid item>
                 <RoutLink to="/signup">
-                  {"Don't have an account? Sign Up"}
+                  {"¿No tienes cuenta? Crea la tuya ahora"}
                 </RoutLink>
               </Grid>
             </Grid>

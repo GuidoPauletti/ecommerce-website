@@ -29,7 +29,7 @@ function Copyright() {
   );
 }
 
-const steps = ['Shipping address', 'Payment details', 'Review your order'];
+const steps = ['Dirección de envio', 'Detalles de pago', 'Revisar tu orden'];
 
 function getStepContent(step) {
   switch (step) {
@@ -76,12 +76,10 @@ export default function Checkout() {
             {activeStep === steps.length ? (
               <React.Fragment>
                 <Typography variant="h5" gutterBottom>
-                  Thank you for your order.
+                  Gracias por tu orden.
                 </Typography>
                 <Typography variant="subtitle1">
-                  Your order number is #2001539. We have emailed your order
-                  confirmation, and will send you an update when your order has
-                  shipped.
+                  El numero de tu orden es #2001539. Te hemos enviado por email la confirmación de tu orden, y te enviaremos un mail cuando tu pedido haya partido.
                 </Typography>
               </React.Fragment>
             ) : (
@@ -90,7 +88,7 @@ export default function Checkout() {
                 <Box sx={{ display: 'flex', justifyContent: 'flex-end' }}>
                   {activeStep !== 0 && (
                     <Button onClick={handleBack} sx={{ mt: 3, ml: 1 }}>
-                      Back
+                      Atras
                     </Button>
                   )}
 
@@ -99,7 +97,7 @@ export default function Checkout() {
                     onClick={handleNext}
                     sx={{ mt: 3, ml: 1 }}
                   >
-                    {activeStep === steps.length - 1 ? 'Place order' : 'Next'}
+                    {activeStep === steps.length - 1 ? 'Realizar pedido' : 'Siguiente'}
                   </Button>
                 </Box>
               </React.Fragment>
