@@ -33,7 +33,14 @@ export const ShoopingCart = () => {
         <Container>
             <Grid container spacing={3}>
                 <Grid item xs={12}>
-                    <Typography align='center' gutterBottom variant='h4'>
+                    <Typography
+                     align='center'
+                     gutterBottom variant='h4'
+                     sx={{
+                        fontFamily:'Lucida Handwriting',
+                        color: '#dc3545'
+                     }}
+                     >
                         Carrito de compras
                     </Typography>
                 </Grid>

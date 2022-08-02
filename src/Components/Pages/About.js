@@ -10,14 +10,16 @@ export const About = () => (
                         <div className="col-xl-9 col-lg-10 mx-auto">
                             <div className="bg-faded rounded p-5">
                                 <h2 className="section-heading mb-4">
-                                    <span className="section-heading-upper">Strong Coffee, Strong Roots</span>
-                                    <span className="section-heading-lower">About Our Cafe</span>
+                                    <span className="section-heading-upper">Lorem ipsum dolor sit</span>
+                                    <span className="section-heading-lower">Lorem ipsum dolor</span>
                                 </h2>
-                                <p>Founded in 1987 by the Hernandez brothers, our establishment has been serving up rich coffee sourced from artisan farmers in various regions of South and Central America. We are dedicated to travelling the world, finding the best coffee, and bringing back to you here in our cafe.</p>
+                                <p>
+                                    Sed imperdiet enim a molestie ullamcorper. Sed posuere gravida sem non posuere. Phasellus eu risus pulvinar massa tincidunt facilisis sed sed quam. Pellentesque finibus, ante eu 
+                                </p>
                                 <p className="mb-0">
-                                    We guarantee that you will fall in
+                                    Sed posuere gravida sem non posuere. Phasellus eu risus
                                     <em>lust</em>
-                                    with our decadent blends the moment you walk inside until you finish your last sip. Join us for your daily routine, an outing with friends, or simply just to enjoy some alone time.
+                                    nunc commodo urna, quis elementum arcu sapien ut urna. Cras nunc est, aliquam porttitor sagittis eget, faucibus nec neque. Pellentesque in interdum ligula.
                                 </p>
                             </div>
                         </div>

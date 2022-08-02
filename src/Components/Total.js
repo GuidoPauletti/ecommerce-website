@@ -11,12 +11,17 @@ const Container = styled('div')({
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
-    height: '20vh'
+    height: '20vh',
+});
+
+const StylesH5 = styled('h5')({
+  fontFamily:'Lucida Handwriting',
 });
 
 const CheckoutButton = styled(Button)({
     marginTop: '2rem',
-    backgroundColor: 'powderblue',
+    backgroundColor: '#dc3545',
+    color: 'black',
 })
 
 export const Total = () => {
@@ -25,7 +30,7 @@ export const Total = () => {
 
   return (
     <Container>
-        <h5>Cantidad de productos: {basket?.length}</h5>
+        <StylesH5>Cantidad de productos: {basket?.length}</StylesH5>
         <h5>{accounting.formatMoney(getBasketTotal(basket), 'AR$')}</h5>
         <Link to='/checkout'>
           <CheckoutButton>Confirmar</CheckoutButton>

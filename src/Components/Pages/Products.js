@@ -2,9 +2,9 @@ import React from "react";
 import { SingleProduct } from "../Common/SingleProduct";
 
 const product = [
-    {image:"assets/img/producto01.jpeg", title:"Hecho a mano", subtitle:"Especial para vos", description:"We take pride in our work, and it shows. Every time you order a beverage from us, we guarantee that it will be an experience worth having. Whether it's our world famous Venezuelan Cappuccino, a refreshing iced herbal tea, or something as simple as a cup of speciality sourced black coffee, you will be coming back for more."},
-    {image:"assets/img/producto02.jpeg", title:"Aritos", subtitle:"A mi estilo", description:"Our seasonal menu features delicious snacks, baked goods, and even full meals perfect for breakfast or lunchtime. We source our ingredients from local, oragnic farms whenever possible, alongside premium vendors for specialty goods."},
-    {image:"assets/img/producto03.jpeg", title:"Piedritas", subtitle:"Sleccionadas por mi", description:"Travelling the world for the very best quality coffee is something take pride in. When you visit us, you'll always find new blends from around the world, mainly from regions in Central and South America. We sell our blends in smaller to large bulk quantities. Please visit us in person for more details."},
+    {image:"assets/img/producto01.jpeg", title:"Hecho a mano", subtitle:"Especial para vos", description:" Pellentesque in interdum ligula. Nunc sit amet risus et sem dictum rhoncus vitae vitae mi. Proin fringilla dui ut sem tristique, vel rhoncus nunc cursus. Suspendisse potenti. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae."},
+    {image:"assets/img/producto02.jpeg", title:"Aritos", subtitle:"A mi estilo", description:"Vivamus id diam sit amet enim consequat mollis. Fusce nibh dolor, auctor in pulvinar quis, maximus sed ex. Vestibulum tempus augue id tortor eleifend pulvinar. "},
+    {image:"assets/img/producto03.jpeg", title:"Piedritas", subtitle:"Sleccionadas por mi", description:" Praesent pharetra augue est, vel mattis massa faucibus at. Ut pulvinar sollicitudin consequat. Aenean ut ante et leo molestie ultricies sagittis a felis."},
 ]
 
 export const Products = () => (

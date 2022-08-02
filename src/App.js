@@ -5,7 +5,6 @@ import { PageWrapper } from "./Components/PageWrapper";
 // Pages
 import { About } from "./Components/Pages/About";
 import { Products } from "./Components/Pages/Products";
-import { Cart } from "./Components/Pages/Cart";
 import { Store } from "./Components/Pages/Store";
 import { ShoopingCart } from "./Components/Pages/ShoopingCart";
 import SignIn from "./Components/Pages/SignIn";
@@ -61,11 +60,6 @@ export const App = () => {
     <Route
         path="/shoppingcart"
         element={PageWrapper(ShoopingCart)}
-    />
-
-    <Route
-      path="/cart"
-      element={PageWrapper(Cart)}
     />
 
     <Route
