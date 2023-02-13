@@ -8,14 +8,14 @@ This project is an e-commerce website built using React and Material UI for the 
 - Responsive design for different screen sizes
 
 ## :arrow_forward: Getting Started
-1. Clone the repository
+1. Clone the repository:
 git clone https://github.com/GuidoPauletti/ecommerce-website
 
-2. Install dependencies
+2. Install dependencies:
 npm install
 
 
-3. Start the development server
+3. Start the development server:
 npm start
 
 
